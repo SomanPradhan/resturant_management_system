@@ -1,0 +1,11 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.roundButton{
+    -fx-border-color: #9999ff;
+    -fx-border-radius: 10;
+}

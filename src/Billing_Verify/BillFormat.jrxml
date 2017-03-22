@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="297" pageHeight="450" columnWidth="257" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3f2a08b6-eaae-4704-a8dd-23c0fb0bb25a">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.text.truncate.suffix" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.fit.height" value="1"/>
+	<property name="net.sf.jasperreports.export.xls.remove.empty.space.between.rows" value="1"/>
+	<property name="net.sf.jasperreports.export.xls.create.custom.palette" value="1"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\xampp\\Cafe\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="mainParam" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[$P{mainParam}]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from tbl_sales where bill_id = $P{mainParam}]]>
+	</queryString>
+	<field name="bill_id" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_sales_amount" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="discount" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vat" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="service_charge" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="grand_total_amount" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rounded_amount" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="serial" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$V{COLUMN_COUNT}]]></variableExpression>
+	</variable>
+	<variable name="subTotal" class="java.lang.String"/>
+	<variable name="grandTotal" class="java.lang.String"/>
+	<title>
+		<band height="54" splitType="Stretch">
+			<subreport>
+				<reportElement x="-19" y="0" width="294" height="54" uuid="c63b7f59-6c45-46e7-b4b5-b8b73e15d655"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "top_SubReport.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="17" width="29" height="13" uuid="5527d19e-86c3-4b8e-9cd4-848f49f5d50e"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Name :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="29" width="60" height="12" uuid="16e8e346-1471-49a0-ae19-60a0a2c9df68"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Payment Mode :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="1" width="29" height="13" uuid="1de2d5f5-f110-42f8-a45a-84f7cc672d81"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Bill No :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="30" width="71" height="11" uuid="e695cc24-1455-467c-a5e3-3465e22f73ca"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[CASH]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="29" y="1" width="53" height="13" uuid="1bbfb11c-885c-42f4-85c3-e47fa9d8fc70"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bill_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="29" y="17" width="51" height="12" uuid="8dfbee39-3117-4023-b8bd-df8e7fc54a27"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="19" splitType="Stretch">
+			<staticText>
+				<reportElement x="101" y="0" width="52" height="16" uuid="14608f43-da4a-496b-86eb-6f2356ce7f8f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="0" width="49" height="17" uuid="78058fbb-030c-4b39-a74e-8cf9b13d2cab"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="257" height="1" uuid="12e6dcb7-e046-4d56-9ffb-f919f1c9d8ca"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="0" width="24" height="16" uuid="6473bebf-f8b7-49c9-a759-98681975c9b3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[S.N.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="16" width="257" height="1" uuid="7faeeaad-c94d-43c1-ba72-d5fd97fc1dad"/>
+			</line>
+			<staticText>
+				<reportElement x="24" y="1" width="77" height="15" uuid="c8faaa7e-9ec9-46fc-9dc8-fdce8135f8b4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Particulars]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="2" width="53" height="14" uuid="b45ad527-8a88-463a-aec2-cf585835515a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Immediate">
+			<subreport>
+				<reportElement x="-14" y="0" width="289" height="15" uuid="ceb271ab-1ed5-422f-83f1-629a8de348e7"/>
+				<subreportParameter name="mainParam">
+					<subreportParameterExpression><![CDATA[$P{mainParam}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "middle_SubReport.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="78" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="157" y="14" width="50" height="13" forecolor="#000000" backcolor="#FFFFFF" uuid="bc119d35-c704-4a28-b77d-586a8d584040"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Discount    :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="157" y="27" width="50" height="14" uuid="b3a861f4-2a23-4364-bbce-1493bb989ee6"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sub Total   :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="41" width="88" height="13" uuid="a5bdb1f2-db9c-49b6-a6e3-a1521922b97d"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Service Charge(10%) :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="157" y="54" width="50" height="12" uuid="0e6f7bed-244e-4bba-97e9-c08f3031dd3b"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[VAT(13%)	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="66" width="58" height="12" uuid="94bbd089-97e7-4d5d-aa85-b2b2a8d647c9"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Grand Total   :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="257" height="1" uuid="55bb49eb-d9d6-40f7-9e79-7a39ef7b5a54"/>
+			</line>
+			<staticText>
+				<reportElement x="157" y="1" width="50" height="13" uuid="c640aa8d-6cb1-4fc1-981d-1403d01f2fc3"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Total          :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="207" y="27" width="50" height="14" uuid="2a1e745a-8c3a-4545-b750-bab87a3943f2"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_sales_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="207" y="14" width="50" height="13" uuid="0b2fb074-dbae-458f-8cee-fa2ed82bee33"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{discount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="207" y="41" width="50" height="13" uuid="9d6a2af4-e282-41ac-a575-f3625fd9a11b"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{service_charge}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="207" y="54" width="50" height="12" uuid="2680c89a-db58-439b-a8b3-310e8b5e8051"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="207" y="1" width="50" height="13" uuid="bbab94c3-6594-47b9-8ec1-c9c280260cc2"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_sales_amount} + $F{discount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="207" y="66" width="50" height="12" uuid="dff28cfb-bb56-42a3-a222-ef96099aa87e"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{grand_total_amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="82" height="13" uuid="3030471d-ed97-43d8-b2d0-3c074416e29e"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Thank you, visit again.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="13" width="257" height="2" uuid="1bf399fe-b079-4597-be0e-f14b8b599073"/>
+			</line>
+			<staticText>
+				<reportElement mode="Transparent" x="131" y="0" width="40" height="13" forecolor="#000000" backcolor="#FFFFFF" uuid="bd7fcb5b-18f0-4b4c-8b49-405820691a9d"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Authorize:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="257" height="1" uuid="add5c029-a596-483d-ad31-a160da5572e5"/>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>

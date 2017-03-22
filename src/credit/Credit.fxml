@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="649.0" prefWidth="906.0" stylesheets="@StyleAndColor.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="credit.CreditFXMLController">
+   <children>
+      <SplitPane dividerPositions="0.1104" orientation="VERTICAL" prefHeight="627.0" prefWidth="779.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <DatePicker fx:id="datePicker_From" layoutX="215.0" layoutY="21.0" onAction="#updateLowerTable" />
+                  <DatePicker fx:id="datePicker_To" layoutX="501.0" layoutY="21.0" onAction="#updateLowerTable" />
+                  <Label layoutX="134.0" layoutY="21.0" prefHeight="25.0" prefWidth="72.0" text="Date From :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="421.0" layoutY="21.0" prefHeight="25.0" prefWidth="72.0" text="Date To :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.26274944567627495" prefHeight="553.0" prefWidth="777.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <VBox layoutX="1.0" layoutY="27.0" prefHeight="187.0" prefWidth="232.0" spacing="15.0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="27.0">
+                                 <children>
+                                    <HBox layoutX="36.0" layoutY="72.0">
+                                       <children>
+                                          <Label layoutX="36.0" layoutY="79.0" prefHeight="30.0" prefWidth="113.0" text="Cid :" />
+                                          <Label fx:id="label_Cid" prefHeight="17.0" prefWidth="95.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="36.0" layoutY="44.0">
+                                       <children>
+                                          <Label layoutX="36.0" layoutY="51.0" prefHeight="30.0" prefWidth="113.0" text="Name : " />
+                                          <Label fx:id="label_Name" prefHeight="17.0" prefWidth="95.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="36.0" layoutY="108.0" spacing="5.0">
+                                       <children>
+                                          <Label layoutX="36.0" layoutY="108.0" prefHeight="17.0" prefWidth="113.0" text="Credit Amount :" />
+                                          <Label fx:id="label_CreditAmount" layoutX="175.0" layoutY="108.0" prefHeight="17.0" prefWidth="95.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox layoutX="36.0" layoutY="126.0">
+                                       <children>
+                                          <Label layoutX="36.0" layoutY="133.0" prefHeight="28.0" prefWidth="113.0" text="Received Amount :" />
+                                          <JFXTextField fx:id="textField_ReceivedAmount" layoutX="170.0" layoutY="126.0" maxWidth="95.0" minWidth="95.0" onKeyReleased="#calculation" prefHeight="31.0" prefWidth="95.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="36.0" layoutY="162.0" spacing="5.0">
+                                       <children>
+                                          <Label layoutX="36.0" layoutY="162.0" prefHeight="17.0" prefWidth="113.0" text="Remaining Amount :" />
+                                          <Label fx:id="label_RemainingAmount" layoutX="176.0" layoutY="162.0" prefHeight="17.0" prefWidth="95.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </VBox>
+                              <HBox layoutX="11.0" layoutY="277.0" prefHeight="38.0" prefWidth="212.0" spacing="20.0">
+                                 <children>
+                                    <JFXButton fx:id="btn_Save" layoutX="151.0" layoutY="308.0" onAction="#save" prefHeight="34.0" prefWidth="92.0" styleClass="roundButton" text="Save" />
+                                    <JFXButton fx:id="btn_Cancel" layoutX="304.0" layoutY="308.0" onAction="#cancel" prefHeight="34.0" prefWidth="92.0" styleClass="roundButton" text="Cancel" />
+                                 </children>
+                              </HBox>
+                           </children></AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <SplitPane dividerPositions="0.527306967984934" orientation="VERTICAL" prefHeight="533.0" prefWidth="662.0" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <TableView fx:id="table_Credit" prefHeight="295.0" prefWidth="523.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columns>
+                                              <TableColumn fx:id="sn1" prefWidth="75.0" text="SN" />
+                                              <TableColumn fx:id="id1" prefWidth="138.0" text="ID" />
+                                                <TableColumn fx:id="name" prefWidth="250.0" text="Name" />
+                                                <TableColumn fx:id="total_remaining_amount" prefWidth="196.0" text="Total Remaining Amount" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="206.0" prefWidth="660.0">
+                                       <children>
+                                          <TableView fx:id="table_Credit_details" prefHeight="230.0" prefWidth="660.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columns>
+                                              <TableColumn fx:id="sn2" prefWidth="31.0" text="SN" />
+                                              <TableColumn fx:id="id2" prefWidth="69.0" text="ID" />
+                                                <TableColumn fx:id="bill_id" prefWidth="110.0" text="BiIl ID" />
+                                                <TableColumn fx:id="date" prefWidth="119.0" text="Date" />
+                                                <TableColumn fx:id="total_amount" minWidth="0.0" prefWidth="97.0" text="Total Amount" />
+                                                <TableColumn fx:id="received_amount" prefWidth="96.0" text="Received Amount" />
+                                                <TableColumn fx:id="remaining_amount" prefWidth="137.0" text="Remaining Amount" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                              <JFXButton fx:id="btn_Delete" layoutX="496.0" layoutY="536.0" onAction="#delete" prefHeight="31.0" prefWidth="92.0" styleClass="roundButton" text="Delete" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="74.0" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

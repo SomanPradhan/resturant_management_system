@@ -1,0 +1,24 @@
+/*Menu Bar*/
+.menu-bar {
+    -fx-background-color: #9999ff;
+    /*-fx-background-color: #2495ff;*/
+}
+
+/*Menus*/
+.menu .label {
+    -fx-text-fill: black;
+}
+
+/*Menu Items*/
+.menu-item:focused {
+    -fx-background-color: greenyellow;
+}
+.menu-item .label {
+    -fx-text-fill: black;
+}
+
+.roundButton{
+    -fx-background-radius:15;
+    -fx-background-color: #cccccc;
+    ;
+}

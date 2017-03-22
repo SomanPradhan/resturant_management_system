@@ -1,0 +1,32 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 2, 2016, 10:37:03 AM
+    Author     : konoha Village
+*/
+.layout{
+    -fx-background-color: #A0522D;
+}
+
+/* Button */
+.roundButton{
+    -fx-background-radius:15;
+    -fx-background-color: #cccccc;
+    ;
+}
+/* List */
+.list-view {
+    -fx-background-color: #9999ff;   
+}
+.list-view .listcell{
+    -fx-padding: 20 10 10 0;
+    -fx-background-color: #00ffff;
+    -fx-text-fill: lightpink;    
+}
+.list-view .listcell:cell-selection{
+    -fx-background-color: -fx-focus-color,#00fc05;
+}
+

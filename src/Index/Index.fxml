@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="692.0" prefWidth="1358.0" stylesheets="@IndexStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Index.IndexController">
+   <children>
+      <MenuBar layoutX="-1.0" layoutY="64.0" prefHeight="25.0" prefWidth="1358.0" stylesheets="@IndexStyle.css" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="64.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Transaction">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#salesDetailByBill" text="Sales Details - By Bill" />
+                  <MenuItem mnemonicParsing="false" onAction="#salesDetailByCategory" text="Sales Details - By Category" />
+                  <MenuItem mnemonicParsing="false" onAction="#purchaseEntry" text="Purchase Entry" />
+                  <MenuItem mnemonicParsing="false" onAction="#purchaseReport" text="Purchase Report" />
+                  <MenuItem mnemonicParsing="false" onAction="#creditSalesEntry" text="Credit - Sales" />
+                  <MenuItem mnemonicParsing="false" onAction="#creditSalesTransaction" text="Credit - Sales Transaction" />
+                  <MenuItem mnemonicParsing="false" onAction="#creditPurchase" text="Credit - Purchase" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Account">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#accountSetting" text="Account Setting" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Employee">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#employeeDetails" text="Employee Details" />
+                  <MenuItem mnemonicParsing="false" onAction="#employeePayroll" text="Employee Payroll" />
+                  <MenuItem mnemonicParsing="false" onAction="#employeeExpenses" text="Employee Expenses" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Expenses">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#expensesEntry" text="Expenses Entry" />
+                  <MenuItem mnemonicParsing="false" onAction="#saving" text="Saving" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Report">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#cashInHand" text="Cash in hand " />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Items and Menu">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#items" text="Items" />
+                  <MenuItem mnemonicParsing="false" onAction="#assetsfx" text="Assets" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Wastage and Repairs">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#wastage" text="Wastage and Repairs" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Help desk" />
+                  <MenuItem mnemonicParsing="false" text="Online Help" />
+                  <MenuItem mnemonicParsing="false" text="About Restaurant Management System" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="7.0" prefHeight="52.0" prefWidth="1358.0" text="The Chefs Cafe" textAlignment="CENTER">
+         <font>
+            <Font name="Yu Mincho Light" size="48.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="pane" layoutX="6.0" layoutY="89.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0" />
+      <JFXButton fx:id="button_switch" buttonType="RAISED" layoutX="1185.0" layoutY="7.0" onAction="#switchFXML" prefHeight="43.0" prefWidth="134.0" ripplerFill="#38e138" styleClass="roundButton" text="Switch">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

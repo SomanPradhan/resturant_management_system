@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AccountSetting_AddEdit.FXMLUserAddEditController">
+   <children>
+      <SplitPane dividerPositions="0.1407035175879397" layoutX="124.0" layoutY="35.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <HBox layoutX="38.0" layoutY="-36.0" prefHeight="53.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="72.0" prefWidth="656.0" text="Add/Edit">
+                           <font>
+                              <Font name="Algerian" size="35.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane layoutX="73.0" layoutY="75.0" prefHeight="339.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <SplitPane dividerPositions="0.8477611940298507" layoutX="96.0" layoutY="60.0" orientation="VERTICAL" prefHeight="337.0" prefWidth="511.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Pane layoutX="26.0" layoutY="14.0" prefHeight="248.0" prefWidth="556.0">
+                                             <children>
+                                                <JFXTextField fx:id="textField_id" layoutX="153.0" layoutY="29.0">
+                                                   <font>
+                                                      <Font size="19.0" />
+                                                   </font>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="textField_username" layoutX="153.0" layoutY="77.0">
+                                                   <font>
+                                                      <Font size="19.0" />
+                                                   </font>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="textField_password" layoutX="153.0" layoutY="125.0" onAction="#saveFun">
+                                                   <font>
+                                                      <Font size="19.0" />
+                                                   </font>
+                                                </JFXTextField>
+                                                <JFXRadioButton fx:id="radioBtn_admin" layoutX="158.0" layoutY="193.0" text="Admin">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="privilieges" />
+                                                   </toggleGroup>
+                                                </JFXRadioButton>
+                                                <JFXRadioButton fx:id="radioBtn_user" layoutX="270.0" layoutY="193.0" selected="true" text="User" toggleGroup="$privilieges">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </JFXRadioButton>
+                                                
+                                                <Label layoutX="118.0" layoutY="44.0" prefHeight="33.0" prefWidth="28.0" text="Id">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="42.0" layoutY="85.0" prefHeight="33.0" prefWidth="96.0" text="Username">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="50.0" layoutY="140.0" prefHeight="33.0" prefWidth="91.0" text="Password">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="48.0" layoutY="190.0" prefHeight="33.0" prefWidth="96.0" text="Privileges">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="textId_error" layoutX="376.0" layoutY="52.0" prefHeight="17.0" prefWidth="125.0" text="* id is requried" textFill="RED" />
+                                                <Label fx:id="textUsername_error" layoutX="376.0" layoutY="101.0" prefHeight="17.0" prefWidth="131.0" text="* username is requried" textFill="RED" />
+                                                <Label fx:id="textPassword_error" layoutX="376.0" layoutY="148.0" prefHeight="17.0" prefWidth="138.0" text="* password is requried" textFill="RED" />
+                                                <Label fx:id="textPrivileges_error" layoutX="376.0" layoutY="200.0" prefHeight="17.0" prefWidth="152.0" text="* atleast 1 admin is requried" textFill="RED" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <HBox layoutX="82.0" layoutY="-3.0" prefHeight="48.0" prefWidth="594.0" spacing="80.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <JFXButton fx:id="btn_save" buttonType="RAISED" onAction="#saveFun" prefHeight="33.0" prefWidth="91.0" ripplerFill="#05eb1c" styleClass="roundButton" stylesheets="@fxmladdedit.css" text="save">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                                <JFXButton fx:id="btn_cancel" buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#cancelFun" prefHeight="33.0" prefWidth="91.0" ripplerFill="RED" styleClass="roundButton" stylesheets="@fxmladdedit.css" text="cancel">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                             </children>
+                                             <padding>
+                                                <Insets left="100.0" top="7.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

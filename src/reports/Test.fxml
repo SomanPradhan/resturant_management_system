@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="reports.TestController">
+   <children>
+      <JFXTextField fx:id="textField_Username" layoutX="328.0" layoutY="79.0" />
+      <JFXTextField fx:id="textField_Password" layoutX="334.0" layoutY="154.0" />
+      <JFXButton layoutX="339.0" layoutY="241.0" prefHeight="25.0" prefWidth="127.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="72.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="130.0" layoutY="258.0" prefHeight="17.0" prefWidth="119.0" text="Label" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,41 @@
+[33mbd75ac9[m HEAD@{0}: reset: moving to HEAD~1
+[33m0f8b4c8[m HEAD@{1}: checkout: moving from nibesh_branch to nibesh_build
+[33meedef3e[m HEAD@{2}: checkout: moving from nibesh_build to nibesh_branch
+[33m0f8b4c8[m HEAD@{3}: checkout: moving from nibesh_branch to nibesh_build
+[33meedef3e[m HEAD@{4}: commit: try
+[33mbd75ac9[m HEAD@{5}: checkout: moving from nibesh_build to nibesh_branch
+[33m0f8b4c8[m HEAD@{6}: checkout: moving from nibesh_branch to nibesh_build
+[33mbd75ac9[m HEAD@{7}: checkout: moving from nibesh_build to nibesh_branch
+[33m0f8b4c8[m HEAD@{8}: commit: jst a try
+[33mbd75ac9[m HEAD@{9}: checkout: moving from nibesh_branch to nibesh_build
+[33mbd75ac9[m HEAD@{10}: checkout: moving from nibesh_build to nibesh_branch
+[33mbd75ac9[m HEAD@{11}: checkout: moving from nibesh_branch to nibesh_build
+[33mbd75ac9[m HEAD@{12}: checkout: moving from master to nibesh_build
+[33mbd75ac9[m HEAD@{13}: commit: Completed Report and fixed minor Errors
+[33m8b25a9d[m HEAD@{14}: commit: New problem solved. only finish remaining
+[33m12e5b06[m HEAD@{15}: commit: JasperReport completed
+[33m2601000[m HEAD@{16}: commit: JasperReport roughly solved
+[33m016b56e[m HEAD@{17}: commit: working with JasperReport
+[33me6dd3a8[m HEAD@{18}: commit: required plugins for jasper report installed
+[33mf799e29[m HEAD@{19}: reset: moving to f799e29
+[33m826deec[m HEAD@{20}: reset: moving to 826deec
+[33mf799e29[m HEAD@{21}: commit: Jasper Report designed
+[33m826deec[m HEAD@{22}: commit: Data fetched from tbl_mp(item_name & rate)
+[33ma8aad1d[m HEAD@{23}: commit: Dynamic Date and time + Verify xml build
+[33m59df4eb[m HEAD@{24}: commit: delete probelm solved
+[33m284a59c[m HEAD@{25}: commit: sql error in getSelectedSN method. for DeleteData.
+[33m1eb567d[m HEAD@{26}: reset: moving to 1eb567d
+[33m2deefe5[m HEAD@{27}: commit (merge): jst a commit. lots of error
+[33m1eb567d[m HEAD@{28}: commit: method getSelectedSN build but sql error
+[33mc7e7f52[m HEAD@{29}: commit: few error detected in SN and now SN is error free
+[33ma9e1b9f[m HEAD@{30}: commit: SN edited for newly encounterd problems and SN problem solved
+[33me6b5b4d[m HEAD@{31}: commit: SN problem solved
+[33m26e477a[m HEAD@{32}: commit: showdata problem solved.
+[33m0ea0136[m HEAD@{33}: reset: moving to 0ea0136
+[33m9164210[m HEAD@{34}: reset: moving to 9164210
+[33m0ea0136[m HEAD@{35}: reset: moving to 0ea0136
+[33m3eeef14[m HEAD@{36}: commit: final test commit
+[33m9164210[m HEAD@{37}: commit: 4th test commit
+[33m93d53d1[m HEAD@{38}: commit: third test commit
+[33m3e35165[m HEAD@{39}: commit: 2nd test commit
+[33m0ea0136[m HEAD@{40}: commit (initial): my first commit

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import NumberTextField.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EmployeeAddEdit.AddEditEmployeeController">
+   
+    
+    <children>
+      <SplitPane dividerPositions="0.1330166270783848" orientation="VERTICAL" prefHeight="423.0" prefWidth="641.0">
+        <items>
+            <Label prefHeight="53.0" prefWidth="371.0" text="ADD/EDIT employee record" textFill="#171717" textOverrun="WORD_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font name="Algerian" size="24.0" />
+               </font>
+            </Label>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="639.0">
+               <children>
+                  <AnchorPane layoutX="-1.0" prefHeight="368.0" prefWidth="641.0">
+                     <children>
+                        <Pane layoutY="-22.0" prefHeight="397.0" prefWidth="639.0">
+                           <children>
+                              <Label fx:id="label_id" layoutX="21.0" layoutY="53.0" text="ID">
+                                 <font>
+                                    <Font name="Arial" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_name" layoutX="11.0" layoutY="97.0" text="Name">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_post" layoutX="11.0" layoutY="143.0" text="Post">
+                                 <font>
+                                    <Font name="Arial" size="21.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_address" layoutX="9.0" layoutY="195.0" text="Address">
+                                 <font>
+                                    <Font name="Arial" size="21.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_contact" layoutX="9.0" layoutY="245.0" text="Contact">
+                                 <font>
+                                    <Font name="Arial" size="21.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_joined_date" layoutX="5.0" layoutY="298.0" text="Joined Date">
+                                 <font>
+                                    <Font name="Arial" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_salary" layoutX="12.0" layoutY="348.0" text="Salary">
+                                 <font>
+                                    <Font name="Arial" size="19.0" />
+                                 </font>
+                              </Label>
+                              <NumberTextField fx:id="textField_id" layoutX="159.0" layoutY="49.0" />
+                              <JFXTextField fx:id="textField_name" layoutX="159.0" layoutY="92.0" />
+                              <JFXTextField fx:id="textField_address" layoutX="159.0" layoutY="192.0" />
+                              <NumberTextField fx:id="textField_contact" layoutX="159.0" layoutY="242.0" />
+                              <DatePicker fx:id="datePicker" layoutX="159.0" layoutY="296.0" onAction="#pickDate" />
+                              <NumberTextField fx:id="textField_salary" layoutX="159.0" layoutY="344.0" />
+                              <JFXTextField fx:id="textField_joined_date" layoutX="442.0" layoutY="293.0" visible="false" />
+                              <JFXTextField fx:id="textField_post" layoutX="159.0" layoutY="140.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <JFXButton fx:id="button_save" buttonType="RAISED" layoutX="149.0" layoutY="430.0" onAction="#save_data" ripplerFill="#dd095b" styleClass="roundButton" stylesheets="@fxmladdedit.css" text="SAVE" textFill="#1b1a1a">
+         <font>
+            <Font name="Algerian" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="button_cancel" buttonType="RAISED" layoutX="328.0" layoutY="430.0" onAction="#cancel_field" ripplerFill="#ee0b62" styleClass="roundButton" stylesheets="@fxmladdedit.css" text="cancel" textFill="#1b1a1a" textOverrun="CLIP">
+         <font>
+            <Font name="Algerian" size="24.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

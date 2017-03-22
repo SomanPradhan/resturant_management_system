@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import NumberTextField.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="504.0" prefWidth="771.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Items.ItemsController">
+    <stylesheets>
+        <URL value="@StyleAndColor.css" />
+    </stylesheets>
+   <children>
+      <SplitPane dividerPositions="0.5617529880478087" layoutX="174.0" layoutY="143.0" orientation="VERTICAL" prefHeight="504.0" prefWidth="707.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <GridPane layoutX="176.0" layoutY="140.0" prefHeight="279.0" prefWidth="705.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="ALWAYS" maxWidth="137.0" minWidth="8.0" prefWidth="27.0" />
+                        <ColumnConstraints hgrow="NEVER" maxWidth="149.0" minWidth="10.0" prefWidth="149.0" />
+                        <ColumnConstraints hgrow="ALWAYS" maxWidth="137.0" minWidth="8.0" prefWidth="27.0" />
+                        <ColumnConstraints hgrow="NEVER" maxWidth="181.0" minWidth="10.0" prefWidth="148.0" />
+                        <ColumnConstraints hgrow="ALWAYS" maxWidth="142.0" minWidth="10.0" prefWidth="25.0" />
+                        <ColumnConstraints hgrow="NEVER" maxWidth="225.0" minWidth="10.0" prefWidth="148.0" />
+                        <ColumnConstraints hgrow="ALWAYS" maxWidth="195.0" minWidth="10.0" prefWidth="27.0" />
+                      <ColumnConstraints hgrow="NEVER" maxWidth="406.0" minWidth="10.0" prefWidth="148.0" />
+                        <ColumnConstraints hgrow="ALWAYS" maxWidth="275.0" minWidth="10.0" prefWidth="27.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ComboBox fx:id="comboBox_inputType" onAction="#inputTypefunCombo" prefWidth="150.0" GridPane.columnIndex="1" />
+                        <ComboBox fx:id="comboBox_itemType" onAction="#onClickItemType" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label prefHeight="28.0" prefWidth="149.0" text="Item Type :" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="37.0" layoutY="96.0" prefHeight="28.0" prefWidth="149.0" text="Category Id :" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="37.0" layoutY="136.0" prefHeight="28.0" prefWidth="149.0" text="Sub Category Id :" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="211.0" layoutY="136.0" prefHeight="28.0" prefWidth="149.0" text="Item Code :" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="381.0" layoutY="136.0" prefHeight="28.0" prefWidth="149.0" text="Cost Price :" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="37.0" layoutY="136.0" prefHeight="28.0" prefWidth="149.0" text="Category Name :" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="211.0" layoutY="136.0" prefHeight="28.0" prefWidth="149.0" text="Sub Category Name :" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="381.0" layoutY="96.0" prefHeight="28.0" prefWidth="149.0" text="Item Name :" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="545.0" layoutY="96.0" prefHeight="28.0" prefWidth="149.0" text="Rate :" GridPane.columnIndex="7" GridPane.rowIndex="4">
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                        <JFXTextField fx:id="textField_catId" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <JFXTextField fx:id="textField_subCatId" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <JFXTextField fx:id="textField_itemCode" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                        <NumberTextField fx:id="textField_costPrice" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                        <JFXTextField fx:id="textField_catName" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <JFXTextField fx:id="textField_subCatName" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <JFXTextField fx:id="textField_itemName" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                        <NumberTextField fx:id="textField_Rate" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                        <ComboBox fx:id="comboBox_catId" onAction="#onClikcCatIdCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <ComboBox fx:id="comboBox_catName" onAction="#onClikcCatNameCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <ComboBox fx:id="comboBox_subCatId" onAction="#onClikcSubCatIdCombo" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <ComboBox fx:id="comboBox_subCatName" onAction="#onClikcSubCatNameCombo" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="button_Delete" buttonType="RAISED" onAction="#onClickDelete" prefHeight="25.0" prefWidth="92.0" ripplerFill="RED" styleClass="roundButton" text="Delete" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="button_Edit" buttonType="RAISED" layoutX="46.0" layoutY="257.0" onAction="#onClickEdit" prefHeight="25.0" prefWidth="92.0" ripplerFill="#3fff3f" styleClass="roundButton" text="Edit" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="button_Save" buttonType="RAISED" layoutX="231.0" layoutY="257.0" onAction="#onClickSave" prefHeight="25.0" prefWidth="92.0" ripplerFill="#46ff46" styleClass="roundButton" text="Save" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="button_Cancel" buttonType="RAISED" layoutX="413.0" layoutY="257.0" onAction="#onClickCancel" prefHeight="25.0" prefWidth="92.0" ripplerFill="RED" styleClass="roundButton" text="Cancel" GridPane.columnIndex="7" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </JFXButton>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="table_ItemDetails" layoutX="109.0" layoutY="9.0" prefHeight="217.0" prefWidth="705.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="column_Sn" prefWidth="75.0" text="S.N." />
+                      <TableColumn fx:id="column_catId" prefWidth="75.0" text="Cat-Id" />
+                        <TableColumn fx:id="column_catName" prefWidth="75.0" text="Cat-Name" />
+                        <TableColumn fx:id="column_subCatId" prefWidth="75.0" text="Sub Cat-Id" />
+                        <TableColumn fx:id="column_subCatName" prefWidth="75.0" text="SubCat-Name" />
+                        <TableColumn fx:id="column_itemCode" prefWidth="75.0" text="Item Code" />
+                        <TableColumn fx:id="column_itemName" prefWidth="75.0" text="Item Name" />
+                        <TableColumn fx:id="column_costPrice" prefWidth="75.0" text="Cost Price" />
+                        <TableColumn fx:id="column_rate" prefWidth="75.0" text="Rate" />
+                        <TableColumn fx:id="column_subCatNumber" prefWidth="75.0" text="Sub Cat No." />
+                        <TableColumn fx:id="column_itemNumber" prefWidth="75.0" text="Item no." />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8c4f60bc-f718-47af-ab2c-95b66a808ccb">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="xPath">
+		<![CDATA[/AnchorPane/children/SplitPane/items/AnchorPane/children/TableView/columns/TableColumn]]>
+	</queryString>
+	<field name="TableColumn" class="java.lang.String">
+		<fieldDescription><![CDATA[/AnchorPane/children/SplitPane/items/AnchorPane/children/TableView/columns/TableColumn]]></fieldDescription>
+	</field>
+	<field name="TableColumn2" class="java.lang.String">
+		<fieldDescription><![CDATA[/AnchorPane/children/SplitPane/items/AnchorPane/children/TableView/columns/TableColumn]]></fieldDescription>
+	</field>
+	<field name="TableColumn3" class="java.lang.String">
+		<fieldDescription><![CDATA[/AnchorPane/children/SplitPane/items/AnchorPane/children/TableView/columns/TableColumn]]></fieldDescription>
+	</field>
+	<field name="TableColumn4" class="java.lang.String">
+		<fieldDescription><![CDATA[/AnchorPane/children/SplitPane/items/AnchorPane/children/TableView/columns/TableColumn]]></fieldDescription>
+	</field>
+	<field name="TableColumn5" class="java.lang.String">
+		<fieldDescription><![CDATA[/AnchorPane/children/SplitPane/items/AnchorPane/children/TableView/columns/TableColumn]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="111" height="20" uuid="f9dda892-03dc-45fd-b49a-e5b7fbf6b1e7"/>
+				<textFieldExpression><![CDATA[$F{TableColumn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="20" uuid="42841aaa-c169-4227-867d-fdcb252d75ed"/>
+				<textFieldExpression><![CDATA[$F{TableColumn2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="20" uuid="9cc16273-0a67-41cb-b31d-f38a7a4752ad"/>
+				<textFieldExpression><![CDATA[$F{TableColumn3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="20" uuid="e057a494-a6a7-4c50-8be6-438635048cd4"/>
+				<textFieldExpression><![CDATA[$F{TableColumn4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="20" uuid="1dd3a3db-5630-4c1a-b814-a7f2a79bb141"/>
+				<textFieldExpression><![CDATA[$F{TableColumn5}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

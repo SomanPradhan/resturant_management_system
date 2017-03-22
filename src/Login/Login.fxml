@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="362.0" maxWidth="565.0" minHeight="362.0" minWidth="565.0" prefHeight="362.0" prefWidth="565.0" styleClass="mainFxmlClass" stylesheets="@login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.LoginController">
+   <children>
+      <VBox layoutX="13.0" layoutY="21.0" prefHeight="272.0" prefWidth="344.0">
+         <children>
+            <Pane prefHeight="194.0" prefWidth="343.0">
+               <children>
+                  <ImageView fx:id="imageView_Logo" fitHeight="246.0" fitWidth="354.0" layoutX="2.0" layoutY="-8.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@/Images/logo_cup.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label fx:id="label_name" alignment="CENTER" contentDisplay="CENTER" layoutX="41.0" layoutY="260.0" prefHeight="58.0" prefWidth="357.0">
+               <font>
+                  <Font name="Gabriola" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox focusTraversable="true" layoutX="367.0" layoutY="21.0" prefHeight="300.0" prefWidth="180.0" spacing="50.0">
+         <children>
+            <Label alignment="CENTER" layoutX="215.0" layoutY="64.0" prefHeight="38.0" prefWidth="149.0" text=" Login" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <VBox layoutX="217.0" layoutY="127.0" spacing="40.0">
+               <children>
+                  <JFXTextField fx:id="textField_Username" layoutX="217.0" layoutY="127.0" promptText="Username" />
+                  <JFXPasswordField fx:id="textField_Password" onAction="#signIn" promptText="Password" />
+               </children>
+            </VBox>
+            <JFXButton fx:id="btn_SignIn" alignment="CENTER" buttonType="RAISED" layoutX="239.0" layoutY="252.0" onAction="#signIn" prefHeight="30.0" prefWidth="175.0" ripplerFill="#23eb0d" styleClass="roundButton" text="Sign In" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
